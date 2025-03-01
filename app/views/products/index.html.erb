@@ -2,9 +2,8 @@
 <ul>
   <% @products.each do |product| %>
     <li>
-      <%= link_to product.title, product_path(product) %> - 
-      <strong>Price:</strong> <%= number_to_currency(product.price) %> - 
-      <strong>Stock:</strong> <%= product.stock_quantity %>
+      <%= link_to product.title, product_path(product) %> - <%= product.category.name %>
     </li>
   <% end %>
 </ul>
+
